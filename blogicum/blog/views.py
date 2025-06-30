@@ -44,7 +44,6 @@ posts = [
 ]
 
 
-
 def index(request):
     context = {'posts': posts}  # Передаем posts в контекст
     return render(request, 'blog/index.html', context)
@@ -54,6 +53,7 @@ def post_detail(request, id):
     post = posts[id]  # Для временных данных
     context = {'post': post}
     return render(request, 'blog/detail.html', context)
+
 
 def category_posts(request, category_slug):
     context = {'category': category_slug}
